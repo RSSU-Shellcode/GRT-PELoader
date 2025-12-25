@@ -45,9 +45,10 @@ func main() {
 		return
 	}
 
-	fmt.Println("[WARNING]")
+	fmt.Println("----------------------------------------------------")
+	fmt.Println("[WARNING]                                           ")
 	fmt.Println("This program is only for test PE image is compatible")
-	fmt.Println()
+	fmt.Println("----------------------------------------------------")
 
 	// load custom loader template
 	var (
@@ -112,6 +113,7 @@ func main() {
 
 	fmt.Println("PE image is running")
 	fmt.Println("================================")
+	fmt.Println()
 
 	err = instance.Run()
 	checkError(err)
@@ -131,9 +133,11 @@ func main() {
 
 	err = instance.Free()
 	checkError(err)
+	fmt.Println()
 	fmt.Println("================================")
 	fmt.Println("free instance successfully")
-	fmt.Println()
+	fmt.Println("================================")
+	fmt.Println("")
 }
 
 func checkError(err error) {
